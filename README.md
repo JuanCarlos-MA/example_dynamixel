@@ -7,13 +7,21 @@ Tutorial de como instalar y usar los servomotores Dynamixel de Robotis dentro de
 Se considera que la computadora del usuario ya tiene correctamente instalado ROS, GIT y que ya tiene la carpeta de `catkin_ws` correctamente inicializada.
 
 Deberá contar cos los siguientes componentes (o similares):
-* Un servomotor Dynamixel (ejemplo: Mx-28 Mx-106, etc.)
-* Un usb2dynamixel (http://emanual.robotis.com/docs/en/parts/interface/usb2dynamixel/)
+* Un servomotor [Dynamixel](http://www.robotis.us/dynamixel/) (ejemplo: Mx-28 Mx-106, etc.)
+* Un [usb2dynamixel](http://emanual.robotis.com/docs/en/parts/interface/usb2dynamixel/)
 * Una Switched Modulated Power Supplier SMPS de 12v @ 4A
-* Un U2D2 Power Hub Board
-* Al menos dos cables con canectores Dynamixel
+* Un [U2D2 Power Hub Board](http://emanual.robotis.com/docs/en/parts/interface/u2d2_power_hub/)
+* Al menos dos cables con conectores Dynamixel
 
-Primero asegurarse que se instaló adecuadamente el driver del USB2Dynamicel para Linux (Ubuntu) adecuadamente. LN101, FT232R USB UART, FTDI Chip https://www.ftdichip.com/Drivers/VCP.htm. In Linux VCP drivers are integrated into the kernel. Recent Linux releases include the kernel which contains the FT232RL driver for the FTDI driver used by USB2Dynamixel. Hence, most users won’t need to install the driver manually.
+El primer paso es asegurarse de que se instaló el driver del USB2Dynamixel para Linux (Ubuntu) adecuadamente. Para ello se ejecuta el comando:
+
+```$ ls /dev/tty* ```
+
+Posteriormente se desplegará una lista de dispositivos. El USB2Dynamixel aparecerá como `/dev/ttyUSB0`. Sin embargo el número del puerto podría llegar a cambiar. En caso de contar con una máquina virtual, deberá habilitarse previamente el dispositivo USB en la sección de dispositivos.
+
+
+Las últimas versiones de linux incluyen el kernel que contiene los drivers para usados para el USB2Dynamixel. Por lo tanto la mayoría de los usuarios no necesitarán instalar el driver manualmente. En caso contrario, consultar esta referencia: https://www.ftdichip.com/Drivers/VCP.htm
+
 
 ## Proceso de instalación
 En una Terminal ejecutar las siguientes instrucciones:
