@@ -34,9 +34,9 @@ $ cd ~
 $ git clone https://github.com/ROBOTIS-GIT/DynamixelSDK.git
 ```
 
-Esto descargará el repositorio en nuestra carpeta personal. Dicho paquete descargado, es en realidad un conjunto de librerías diseñadas para diversos lenguajes de programación como JAVA, MATLAB, LabVIEW, C#, etc. y además contiene los archivos necesarios para diversos sistemas operativos (Leer referencia 1 para mayores detalles). Realmente sólo las carpetas  `ros` y `c++` tienen utilidad. En la primera se encuentra el paquete a utilizar como librería y el segundo contiene códigos de ejemplo para mover los motores. La manera más rápida de proceder con la instalación es utilizar el gestor (explorador) de archivos de  Ubuntu y copiar sólo la carpeta `ros` dentro de la carpeta `~/catkin_ws/src/`. Cambiar el nombre de la carpeta `ros`  por  `DynamixelSDK`.
+Esto descargará el repositorio en nuestra carpeta personal. Dicho paquete descargado, es en realidad un conjunto de librerías diseñadas para diversos lenguajes de programación como JAVA, MATLAB, LabVIEW, C#, etc. y además contiene los archivos necesarios para diversos sistemas operativos (Leer referencia [1] para mayores detalles). Realmente sólo las carpetas  `ros` y `c++` tienen utilidad. En la primera se encuentra el paquete a utilizar como librería y el segundo contiene códigos de ejemplo para mover los motores. La manera más rápida de proceder con la instalación es utilizar el gestor (explorador) de archivos de  Ubuntu y copiar sólo la carpeta `ros` dentro de la carpeta `~/catkin_ws/src/`. Cambiar el nombre de la carpeta `ros`  por  `DynamixelSDK`.
 
-Compilar el nuevo paquete `DynamixelSDK` para que pueda ser utilizado postoriormente por otros paquetes:
+Compilar el nuevo paquete `DynamixelSDK` para que pueda ser utilizado posteriormente por otros paquetes:
 ```
 $ cd ~/catkin_ws
 $ catkin build
@@ -66,7 +66,7 @@ $ roscore
 $ rosrun example_dynamixel read_write
 ```
 
-Este programa moverá al motor a una posición específica. Se debe tener cuidado de que el baudrate del dynamixel sea `34)   57600` y que el ID del motor sea `1`.
+Este programa moverá al motor a una posición específica. Se debe tener cuidado de que el baudrate del servomotor dynamixel sea `(34) 57600` y que su ID sea `1`. El protocolo de comunicación usado es el `1.0`. Estos valores se pueden cambiar, pero eso requiere de mayor conocimiento del uso de los servomotores. Se sugiere leer las referencias [2-4] para mayores detalles.
 
 ## Autores y colaboradores
 Este paquete fue desarrollado a partir de programas de OpenCV disponibles en Internet, pero ajustados ligeramente por Marco Antonio Vargas, Sarai, Bryanel y Dr. Alejandro Aceves-López para que sean más comprensibles a los programadores nuevos de ROS.
@@ -74,3 +74,7 @@ Este paquete fue desarrollado a partir de programas de OpenCV disponibles en Int
 ## Referencias
 
 1. Anónimo, "Dynamixel SDK ", [Online]. Available: http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_sdk/overview/, [Accessed: 05-Jun-2019].
+2. Anónimo, "Mx-28", [Online]. Available: http://emanual.robotis.com/docs/en/dxl/mx/mx-28/, [Accessed: 05-Jun-2019].
+3. Anónimo, "Mx-106 ", [Online]. Available: http://emanual.robotis.com/docs/en/dxl/mx/mx-106/, [Accessed: 05-Jun-2019].
+4. Anónimo, "Robotis Dynamixel RX-28 User Manual", [Online]. Available: http://www.hizook.com/files/users/3/RX-28_Robotis_Dynamixel_Servo_UserGuide.pdf, and https://www.manualslib.com/manual/141478/Robotis-Dynamixel-Rx-28.html, [Accessed: 05-Jun-2019].
+5. Anónimo, "Robotis Dynamixel RX-64 User Manual", [Online]. Available: https://www.robotshop.com/media/files/pdf/robotis-bioloid-dynamixel-rx-64-manual.pdf, [Accessed: 05-Jun-2019].
