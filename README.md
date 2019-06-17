@@ -9,7 +9,7 @@ Se considera que la computadora del usuario ya tiene correctamente instalado ROS
 Deberá contar con los siguientes componentes (o similares):
 * Un servomotor [Dynamixel](http://www.robotis.us/dynamixel/) (ejemplo: Mx-28 Mx-106, etc.)
 * Un [usb2dynamixel](http://emanual.robotis.com/docs/en/parts/interface/usb2dynamixel/)
-* Una Switched Modulated Power Supplier [SMPS](https://www.trossenrobotics.com/p/power-supply-12vdc-5a.aspx) de 12v @ 4A
+* Una Switched Modulated Power Supplier [SMPS](https://www.trossenrobotics.com/p/power-supply-12vdc-5a.aspx) de 12v @ 1A (El amperaje dependerá del número de servomotores simultáneamente conectados)
 * Un [U2D2 Power Hub Board](http://emanual.robotis.com/docs/en/parts/interface/u2d2_power_hub/) o un [SMPS2Dynamixel Adapter](https://www.trossenrobotics.com/store/p/5886-SMPS2Dynamixel-Adapter.aspx)
 * Al menos dos cables con conectores Dynamixel [3pins - TTL comm](https://www.trossenrobotics.com/bioloid-servo-sensor-cables.aspx) o [4pins - RS485 comm](https://www.trossenrobotics.com/store/p/6264-Dynamixel-240mm-4-Pin-Cable-10-Pack.aspx)
 
