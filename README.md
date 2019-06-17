@@ -14,7 +14,6 @@ Deberá contar con los siguientes componentes (o similares):
 * Al menos dos cables con conectores Dynamixel [3pins - TTL comm](https://www.trossenrobotics.com/bioloid-servo-sensor-cables.aspx) o [4pins - RS485 comm](https://www.trossenrobotics.com/store/p/6264-Dynamixel-240mm-4-Pin-Cable-10-Pack.aspx)
 
 El primer paso es asegurarse de que el driver del USB2Dynamixel para Linux (Ubuntu) se encuentra instalado adecuadamente. Para ello, conectar el USB2Dynamixel al puerto USB y después ejecutar el comando:
-
 ```$ ls /dev/tty* ```
 
 Se desplegará una lista de dispositivos. El USB2Dynamixel aparecerá como `/dev/ttyUSB0`. Sin embargo el número del puerto podría llegar a cambiar. En caso de contar con una máquina virtual, deberá habilitarse previamente el dispositivo USB en la sección de dispositivos. Para conocer el nombre exacto del puerto habilitado para el USB2Dynamixel, compare la lista de dispositivos cuando éste está conectado y cuando está desconectado.
@@ -22,7 +21,6 @@ Se desplegará una lista de dispositivos. El USB2Dynamixel aparecerá como `/dev
 Las últimas versiones de Linux ya incluyen el kernel que contiene los drivers para el USB2Dynamixel. Por lo tanto la mayoría de los usuarios no necesitarán instalar el driver manualmente. En caso contrario, consultar esta referencia: https://www.ftdichip.com/Drivers/VCP.htm
 
 Por último es necesario habilitar el puerto para que sea utilizado, para ello se emplea:
-
 ```$ sudo chmod a+rw /dev/ttyUSB0 ```
 
 Este comando le asigna permisos de read y write al dispositivo.
@@ -46,7 +44,6 @@ $ source devel/setup.bash
 El proceso de compilación debe terminar sin errores. Para verificar que funcionacorrectamente, se creó un ejemplo basado en el código `read_write.cpp` encontrado en la carpeta de ejemplos para `linux` en `c++`. A este código se le agregaron líneas para lanzar el nodo `read_write` y utilizar la librería `dynamixel_sdk` previamente creada. 
 
 Para instalarlo, ejecutar las siguientes instrucciones: 
-
 ```
 $ cd ~/catkin_ws/src
 $ git clone https://github.com/aaceves/example_dynamixel.git
@@ -55,21 +52,17 @@ $ catkin build
 $ source devel/setup.bash
 ```
 
-
 ## Ejemplo de ejecución
-
-
 En dos Terminales diferentes ejecutar cada una de las siguientes lineas:
-
 ```
 $ roscore
 $ rosrun example_dynamixel read_write
 ```
 
-Este programa moverá al motor a una posición específica. Se debe tener cuidado de que el baudrate del servomotor dynamixel sea `(34) 57600` y que su ID sea `1`. El protocolo de comunicación usado es el `1.0`. Estos valores se pueden cambiar, pero eso requiere de mayor conocimiento del uso de los servomotores. Se sugiere leer las referencias [2-4] para mayores detalles.
+Este programa moverá al motor a una posición específica. Se debe tener cuidado de que el baudrate del servomotor dynamixel sea `(34) 57600` y que su ID sea `1`. El protocolo de comunicación usado es el `1.0`. Estos valores se pueden cambiar, pero eso requiere de mayor conocimiento del uso de los servomotores. Se sugiere leer las referencias [2-5] para mayores detalles.
 
 ## Autores y colaboradores
-Este paquete fue desarrollado a partir de programas de OpenCV disponibles en Internet, pero ajustados ligeramente por Marco Antonio Vargas, Sarai, Bryanel y Dr. Alejandro Aceves-López para que sean más comprensibles a los programadores nuevos de ROS.
+Este paquete fue desarrollado a partir de programas de OpenCV disponibles en Internet, pero ajustados ligeramente por Marco, Sarai, Bryan y el Dr. Alejandro Aceves-López para que sean más comprensibles a los programadores nuevos de ROS.
 
 ## Referencias
 
