@@ -45,7 +45,7 @@ catkin build
 source devel/setup.bash
 ```
 
-El proceso de compilación debe terminar sin errores. Para verificar que funcionacorrectamente, se creó un ejemplo basado en el código `read_write.cpp` encontrado en la carpeta de ejemplos para `linux` en `c++`. A este código se le agregaron líneas para lanzar el nodo `read_write` y utilizar la librería `dynamixel_sdk` previamente creada. 
+El proceso de compilación debe terminar sin errores. Para verificar que funciona correctamente, se creó un ejemplo basado en el código `read_write.cpp` encontrado en la carpeta de ejemplos para `linux` en `c++`. A este código se le agregaron líneas para lanzar el nodo `read_write` y utilizar la librería `dynamixel_sdk` previamente creada. 
 
 Para instalarlo, ejecutar las siguientes instrucciones: 
 ```
