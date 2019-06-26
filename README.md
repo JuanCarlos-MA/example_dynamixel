@@ -12,7 +12,7 @@ Deberá contar con los siguientes componentes (o similares):
 * Un [U2D2 Power Hub Board](http://emanual.robotis.com/docs/en/parts/interface/u2d2_power_hub/) o la pareja [usb2dynamixel](http://emanual.robotis.com/docs/en/parts/interface/usb2dynamixel/) + [SMPS2Dynamixel Adapter](https://www.trossenrobotics.com/store/p/5886-SMPS2Dynamixel-Adapter.aspx)
 * Al menos dos cables con conectores Dynamixel [3pins - TTL comm](https://www.trossenrobotics.com/bioloid-servo-sensor-cables.aspx) o [4pins - RS485 comm](https://www.trossenrobotics.com/store/p/6264-Dynamixel-240mm-4-Pin-Cable-10-Pack.aspx)
 
-![](https://images-na.ssl-images-amazon.com/images/I/712FNMH9KPL._SL1280_.jpg)
+<img src="https://images-na.ssl-images-amazon.com/images/I/712FNMH9KPL._SL1280_.jpg"  width="120" height="120">
 
 El primer paso es asegurarse de que el driver del USB2Dynamixel para Linux (Ubuntu) se encuentra instalado adecuadamente. Para ello, conectar el USB2Dynamixel al puerto USB y después ejecutar el comando en una Terminal:
 ```
