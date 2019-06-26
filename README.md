@@ -21,11 +21,11 @@ Se desplegará una lista de dispositivos. El USB2Dynamixel aparecerá como `/dev
 
 Las últimas versiones de Linux ya contiene los drivers para el USB2Dynamixel. Por lo tanto la mayoría de los usuarios no necesitarán instalar el driver manualmente. En caso contrario, consultar esta referencia: https://www.ftdichip.com/Drivers/VCP.htm
 
-Por último es necesario habilitar el puerto para que sea utilizado, para ello se emplea:
+Por último es necesario habilitar los permisos de lectura y escritura al nuevo dispositivo, para ello se emplea:
 ```
 sudo chmod a+rw /dev/ttyUSB0 
 ```
-Este comando le asigna permisos de lectura y escritura al dispositivo.
+   
 
 ## Proceso de instalación
 En una Terminal ejecutar las siguientes instrucciones:
