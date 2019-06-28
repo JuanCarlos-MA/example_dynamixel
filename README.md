@@ -67,7 +67,7 @@ rosrun example_dynamixel read_write
 
 Este programa moverá al motor a una posición específica. Se debe tener cuidado de que el baudrate del servomotor dynamixel sea `(34) 57600` y que su ID sea `1`. El protocolo de comunicación usado es el `1.0`. Estos valores se pueden cambiar, pero eso requiere de mayor conocimiento del uso de los servomotores. Se sugiere leer las referencias [2-5] para mayores detalles.
 
-Ya puede borrar el repositorio `DynamixelSDK` de la carpeta personal.
+Ya puede borrar el repositorio `DynamixelSDK` de la carpeta personal. Para ello use el gestor (explorador) de archivos de Ubuntu. ¡No borre nada más!.
 
 ## Autores y colaboradores
 Ese paquete fue originalmente desarrollado por Robotis y se encuentra disponibles en Internet [1], pero fue ajustado ligeramente por Marco, Sarai, Bryan y el Dr. Alejandro Aceves-López para que sean más comprensibles a los programadores nuevos de ROS.
