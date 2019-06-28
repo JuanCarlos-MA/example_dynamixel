@@ -16,7 +16,7 @@ Deberá contar con los siguientes componentes (o similares):
   <img width="460" height="300" src="https://images-na.ssl-images-amazon.com/images/I/712FNMH9KPL._SL1280_.jpg">
 </p>
 
-El primer paso es asegurarse de que el driver del USB2Dynamixel para Linux (Ubuntu) se encuentra instalado adecuadamente. Para ello, conectar el USB2Dynamixel al puerto USB y después ejecutar el comando en una Terminal:
+El primer paso es asegurarse de que el driver del USB2Dynamixel para Linux (Ubuntu) se encuentra instalado adecuadamente. Para ello, conectar el USB2Dynamixel al puerto USB y después ejecutar el siguiente comando en una Terminal:
 ```
 ls /dev/tty* 
 ```
