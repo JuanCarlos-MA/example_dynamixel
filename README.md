@@ -38,7 +38,7 @@ cd ~
 git clone https://github.com/ROBOTIS-GIT/DynamixelSDK.git
 ```
 
-Esto descargará el repositorio `DynamixelSDK` en nuestra carpeta personal. Dicho paquete descargado, es en realidad un conjunto de librerías diseñadas para diversos lenguajes de programación como JAVA, MATLAB, LabVIEW, C#, etc. y además contiene los archivos necesarios para diversos sistemas operativos. Leer referencia [1] para mayores detalles. Realmente sólo las carpetas  `ros` y `c++` tienen utilidad. En la primera se encuentra el paquete a utilizar como librería y la segunda contiene códigos de ejemplo para mover los motores. La manera más rápida de proceder con la instalación es utilizar el gestor (explorador) de archivos de  Ubuntu y copiar sólo la carpeta `ros` dentro de la carpeta `~/catkin_ws/src/`. Cambiar el nombre de la carpeta `ros`  por  `DynamixelSDK`.
+Esto descargará el repositorio `DynamixelSDK` en la carpeta personal de usuario. Dicho paquete descargado, es en realidad un conjunto de librerías diseñadas para diversos lenguajes de programación como JAVA, MATLAB, LabVIEW, C#, etc. y además contiene los archivos necesarios para diversos sistemas operativos. Leer referencia [1] para mayores detalles. Realmente sólo las carpetas  `ros` y `c++` tienen utilidad. En la primera se encuentra el paquete a utilizar como librería y la segunda contiene códigos de ejemplo para mover los motores. La manera más rápida de proceder con la instalación es utilizar el gestor (explorador) de archivos de  Ubuntu y copiar sólo la carpeta `ros` dentro de la carpeta `~/catkin_ws/src/`. Cambiar el nombre de la carpeta `ros`  por  `DynamixelSDK`.
 
 Compilar el nuevo paquete `DynamixelSDK` para que pueda ser utilizado posteriormente por otros paquetes:
 ```
@@ -66,6 +66,8 @@ rosrun example_dynamixel read_write
 ```
 
 Este programa moverá al motor a una posición específica. Se debe tener cuidado de que el baudrate del servomotor dynamixel sea `(34) 57600` y que su ID sea `1`. El protocolo de comunicación usado es el `1.0`. Estos valores se pueden cambiar, pero eso requiere de mayor conocimiento del uso de los servomotores. Se sugiere leer las referencias [2-5] para mayores detalles.
+
+Ya puede borrar el repositorio `DynamixelSDK` de la carpeta personal.
 
 ## Autores y colaboradores
 Ese paquete fue originalmente desarrollado por Robotis y se encuentra disponibles en Internet [1], pero fue ajustado ligeramente por Marco, Sarai, Bryan y el Dr. Alejandro Aceves-López para que sean más comprensibles a los programadores nuevos de ROS.
