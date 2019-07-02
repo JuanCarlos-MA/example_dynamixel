@@ -47,7 +47,7 @@ catkin build
 source devel/setup.bash
 ```
 
-El proceso de compilación debe terminar sin errores. 
+El proceso de compilación debe terminar sin errores. Ya puede borrar el repositorio original (generado por el comando `clone`) `DynamixelSDK` de la carpeta personal. Para ello use el gestor (explorador) de archivos de Ubuntu. ¡No borre nada más!.
 
 Para conocer que servomotores están conectados, se puede usar el nodo `find_dynamixel` del paquete `dynamixel_workbench_controllers`. Siga el siguiente procedimiento para instalarlo y usarlo. Para más detalles leer referencia [6].
 
@@ -82,6 +82,7 @@ Si este es el caso, repita la instrucción para otorgar permisos de lectura y es
 [ INFO] [1562033463.086206021]: id : 3, model name : AX-12A
 
 ```
+
 ## Ejemplo de ejecución de un programa de usuario en ROS
 Se creó un programa-ejemplo basado en el código `read_write.cpp` encontrado en la carpeta de ejemplos para `linux` en `c++` de `DynamixelSDK`. A este código se le agregaron líneas para lanzar el nodo `read_write` y utilizar la librería `dynamixel_sdk` previamente creada. 
 
@@ -100,8 +101,6 @@ rosrun example_dynamixel read_write
 ```
 
 Este programa moverá al motor a una posición específica. Se debe tener cuidado de que el baudrate del servomotor dynamixel sea `(34) 57600` y que su ID sea `1`. El protocolo de comunicación usado es el `1.0`. Estos valores se pueden cambiar, pero eso requiere de mayor conocimiento del uso de los servomotores. Se sugiere leer las referencias [2-5] para mayores detalles.
-
-Ya puede borrar el repositorio `DynamixelSDK` de la carpeta personal. Para ello use el gestor (explorador) de archivos de Ubuntu. ¡No borre nada más!.
 
 ## Autores y colaboradores
 Ese paquete fue originalmente desarrollado por Robotis y se encuentra disponibles en Internet [1], pero fue ajustado ligeramente por Marco, Sarai, Bryan y el Dr. Alejandro Aceves-López para que sean más comprensibles a los programadores nuevos de ROS.
