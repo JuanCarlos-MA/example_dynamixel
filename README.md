@@ -47,7 +47,24 @@ catkin build
 source devel/setup.bash
 ```
 
-El proceso de compilación debe terminar sin errores. Para verificar que funciona correctamente, se creó un ejemplo basado en el código `read_write.cpp` encontrado en la carpeta de ejemplos para `linux` en `c++`. A este código se le agregaron líneas para lanzar el nodo `read_write` y utilizar la librería `dynamixel_sdk` previamente creada. 
+El proceso de compilación debe terminar sin errores. 
+
+Para conocer que servomotores están conectados, se puede usar el nodo `find_dynamixel` del paquete `dynamixel_workbench_controllers`. Siga el siguiente procedimiento para instalarlo y usarlo.
+
+```
+cd ~/catkin_ws/src
+git clone https://github.com/ROBOTIS-GIT/dynamixel-workbench.git
+git clone https://github.com/ROBOTIS-GIT/dynamixel-workbench-msgs.git
+cd ~/catkin_ws
+catkin build
+source devel/setup.bash
+```
+El proceso de compilación debe terminar sin errores. El nodo `find_dynamixel` busca en los Baudrate (9600, 57600, 115200, 1000000, 2000000, 3000000, 4000000) y muestra los servomotores dynamixels encontrados.
+```
+roscore
+rosrun dynamixel_workbench_controllers find_dynamixel /dev/ttyUSB0
+```
+Asegurese de que al menos un servomotor dynamixel tenga el Baudrate `(34) 57600` y que su ID sea `1`. Para verificar que funciona correctamente, se creó un ejemplo basado en el código `read_write.cpp` encontrado en la carpeta de ejemplos para `linux` en `c++` de `DynamixelSDK`. A este código se le agregaron líneas para lanzar el nodo `read_write` y utilizar la librería `dynamixel_sdk` previamente creada. 
 
 Para instalarlo, ejecutar las siguientes instrucciones: 
 ```
