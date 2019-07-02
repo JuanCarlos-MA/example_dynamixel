@@ -83,7 +83,7 @@ Si este es el caso, repita la instrucción para otorgar permisos de lectura y es
 
 ```
 
-## Ejemplos de un programas de usuario en ROS
+## Ejemplos de programas de usuario en ROS
 Se creó un paquete llamada `example_dynamixel` con algunos programas basados en los ejemplos presentados en sitio de ROBOTIS GIT - Dinamixel SDK [7] en la carpeta `linux` en `c++`. Dichos programas utilizan la librería `dynamixel_sdk` previamente creada. 
 
 Para instalar el paquete `example_dynamixel` ejecutar las siguientes instrucciones: 
