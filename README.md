@@ -84,7 +84,7 @@ Si este es el caso, repita la instrucción para otorgar permisos de lectura y es
 ```
 
 ## Ejemplos de programas de usuario en ROS
-Se creó un paquete llamada `example_dynamixel` con algunos programas basados en los ejemplos presentados en sitio de ROBOTIS GIT - Dinamixel SDK [7] en la carpeta `linux` en `c++`. Dichos programas utilizan la librería `dynamixel_sdk` previamente creada. 
+Se creó un paquete llamada `example_dynamixel` con algunos programas basados en los ejemplos presentados en sitio de ROBOTIS GIT - Dinamixel SDK [7] dentro de la carpeta `c++/example/protocol1.0/`. Dichos programas utilizan la librería `dynamixel_sdk` previamente creada. 
 
 Para instalar el paquete `example_dynamixel` ejecutar las siguientes instrucciones: 
 ```
@@ -106,10 +106,10 @@ En dos Terminales diferentes ejecutar cada una de las siguientes lineas:
 roscore
 rosrun example_dynamixel <node_name>
 ```
-El protocolo de comunicación usado es el `1.0`. Estos programas se pueden usar como base para programas más complejos, pero eso requiere de mayor conocimiento del uso de los servomotores. Se sugiere leer las referencias [2-5] para mayores detalles.
+Estos programas se pueden usar como base para programas más complejos, pero eso requiere de mayor conocimiento del uso de los servomotores. Se sugiere leer las referencias [2-5] para mayores detalles.
 
 ## Autores y colaboradores
-Ese paquete fue originalmente desarrollado por Robotis y se encuentra disponibles en Internet [1], pero fue ajustado ligeramente por Marco, Sarai, Bryan y el Dr. Alejandro Aceves-López para que sean más comprensibles a los programadores nuevos de ROS.
+Ese paquete fue desarrollado en base a los programas originalmente publicados por Robotis en [1] y [7], pero fue ajustado ligeramente por Marco, Sarai, Bryan y el Dr. Alejandro Aceves-López para que sea más comprensible a los programadores nuevos de ROS.
 
 ## Referencias
 
