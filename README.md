@@ -59,14 +59,34 @@ cd ~/catkin_ws
 catkin build
 source devel/setup.bash
 ```
-El proceso de compilación debe terminar sin errores. Puede aparecer un Warning sobre `No relevant classes found. No output generated` en cuyo case ignórelo. 
-
-El nodo `find_dynamixel` busca en los Baudrate (9600, 57600, 115200, 1000000, 2000000, 3000000, 4000000) y muestra los servomotores dynamixels encontrados.
+El proceso de compilación debe terminar sin errores. Puede aparecer un Warning sobre `No relevant classes found. No output generated` en cuyo case ignórelo. El nodo `find_dynamixel` busca en los Baudrate (9600, 57600, 115200, 1000000, 2000000, 3000000, 4000000) y muestra los servomotores dynamixels encontrados.
 ```
 roscore
 rosrun dynamixel_workbench_controllers find_dynamixel /dev/ttyUSB0
 ```
-Asegurese de que al menos un servomotor dynamixel tenga el Baudrate `(34) 57600` y que su ID sea `1`. Para verificar que funciona correctamente, se creó un ejemplo basado en el código `read_write.cpp` encontrado en la carpeta de ejemplos para `linux` en `c++` de `DynamixelSDK`. A este código se le agregaron líneas para lanzar el nodo `read_write` y utilizar la librería `dynamixel_sdk` previamente creada. 
+Asegurese de que al menos un servomotor dynamixel tenga el Baudrate `(34) 57600` y que su ID sea `1`. 
+Si hay errores:
+```
+[PortHandlerLinux::SetupPort] Error opening serial port!
+[ WARN] [1562033264.693982660]: [DynamixelDriver] Failed to open the port!
+[ WARN] [1562033264.694007892]: Failed to init
+[ INFO] [1562033264.694017542]: Wait for scanning...
+[ INFO] [1562033264.694418720]: Find 0 Dynamixels
+[PortHandlerLinux::SetupPort] Error opening serial port!
+
+ ```
+Si este es el caso, repita la instrucción de otorgar permisos de lecctura y escriitura al dispositivo USB:` sudo chmod a+rw /dev/ttyUSB0 `.  Si todo está correcto:
+```
+[ INFO] [1562033454.445125756]: Succeed to init(1000000)
+[ INFO] [1562033454.445174751]: Wait for scanning...
+[ INFO] [1562033463.086145622]: Find 3 Dynamixels
+[ INFO] [1562033463.086188124]: id : 1, model name : MX-28
+[ INFO] [1562033463.086197548]: id : 2, model name : MX-106
+[ INFO] [1562033463.086206021]: id : 3, model name : AX-12A
+
+```
+
+Se creó un programa-ejemplo basado en el código `read_write.cpp` encontrado en la carpeta de ejemplos para `linux` en `c++` de `DynamixelSDK`. A este código se le agregaron líneas para lanzar el nodo `read_write` y utilizar la librería `dynamixel_sdk` previamente creada. 
 
 Para instalarlo, ejecutar las siguientes instrucciones: 
 ```
