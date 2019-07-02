@@ -73,7 +73,7 @@ Si hay errores, el programa mostrará avisos como los siguientes:
 [ INFO] [1562033264.694418720]: Find 0 Dynamixels
 [PortHandlerLinux::SetupPort] Error opening serial port!
  ```
-Si este es el caso, repita la instrucción para otorgar permisos de lecctura y escriitura al dispositivo USB: ` sudo chmod a+rw /dev/ttyUSB0 `. Si todo está correcto, los mensajes serán del tipo:
+Si este es el caso, repita la instrucción para otorgar permisos de lectura y escritura al dispositivo USB: ` sudo chmod a+rw /dev/ttyUSB0 `. Si todo está correcto, los mensajes serán del tipo:
 ```
 [ INFO] [1562033454.445125756]: Succeed to init(1000000)
 [ INFO] [1562033454.445174751]: Wait for scanning...
