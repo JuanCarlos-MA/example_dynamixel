@@ -83,10 +83,10 @@ Si este es el caso, repita la instrucción para otorgar permisos de lectura y es
 
 ```
 
-## Ejemplo de ejecución de un programa de usuario en ROS
-Se creó un programa-ejemplo basado en el código `read_write.cpp` encontrado en la carpeta de ejemplos para `linux` en `c++` de `DynamixelSDK`. A este código se le agregaron líneas para lanzar el nodo `read_write` y utilizar la librería `dynamixel_sdk` previamente creada. 
+## Ejemplos de un programas de usuario en ROS
+Se creó un paquete llamada `example_dynamixel` con algunos programas basados en los ejemplos presentados en sitio de ROBOTIS GIT - Dinamixel SDK [7] en la carpeta `linux` en `c++`. Dichos programas utilizan la librería `dynamixel_sdk` previamente creada. 
 
-Para instalarlo, ejecutar las siguientes instrucciones: 
+Para instalar el paquete `example_dynamixel` ejecutar las siguientes instrucciones: 
 ```
 cd ~/catkin_ws/src
 git clone https://github.com/aaceves/example_dynamixel.git
@@ -94,13 +94,19 @@ cd ~/catkin_ws
 catkin build
 source devel/setup.bash
 ```
+Se habrán dado de alta los siguientes nodos:
+
+| <node_name> | Descripción | ./src/file |
+| --- | --- | --- |
+| read_write | Mueve el servo 1 de un lado al otro. El baudrate del servomotor debe ser 57600. | read_write.cpp | 
+| ping | Ejecuta el comando ping a los ID = 1, 2 y 3 en un baudrate de 1000000 | ping.cpp | 
+
 En dos Terminales diferentes ejecutar cada una de las siguientes lineas:
 ```
 roscore
-rosrun example_dynamixel read_write
+rosrun example_dynamixel <node_name>
 ```
-
-Este programa moverá al motor a una posición específica. Se debe tener cuidado de que el baudrate del servomotor dynamixel sea `(34) 57600` y que su ID sea `1`. El protocolo de comunicación usado es el `1.0`. Estos valores se pueden cambiar, pero eso requiere de mayor conocimiento del uso de los servomotores. Se sugiere leer las referencias [2-5] para mayores detalles.
+El protocolo de comunicación usado es el `1.0`. Estos programas se pueden usar como base para programas más complejos, pero eso requiere de mayor conocimiento del uso de los servomotores. Se sugiere leer las referencias [2-5] para mayores detalles.
 
 ## Autores y colaboradores
 Ese paquete fue originalmente desarrollado por Robotis y se encuentra disponibles en Internet [1], pero fue ajustado ligeramente por Marco, Sarai, Bryan y el Dr. Alejandro Aceves-López para que sean más comprensibles a los programadores nuevos de ROS.
@@ -113,3 +119,4 @@ Ese paquete fue originalmente desarrollado por Robotis y se encuentra disponible
 4. Anónimo, "Robotis Dynamixel RX-28 User Manual", [Online]. Available: http://www.hizook.com/files/users/3/RX-28_Robotis_Dynamixel_Servo_UserGuide.pdf, and https://www.manualslib.com/manual/141478/Robotis-Dynamixel-Rx-28.html, [Accessed: 05-Jun-2019].
 5. Anónimo, "Robotis Dynamixel RX-64 User Manual", [Online]. Available: https://www.robotshop.com/media/files/pdf/robotis-bioloid-dynamixel-rx-64-manual.pdf, [Accessed: 05-Jun-2019].
 6. Anónimo, "Dynamixel Workbench", [Online]. Available: http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_workbench/, [Accessed: 05-Jun-2019].
+7. Kei OpusK, et. al., " ROBOTIS GIT - Dynamixel SDK ", Available: https://github.com/ROBOTIS-GIT/DynamixelSDK, [Accessed: 05-Jun-2019].
