@@ -59,7 +59,7 @@ cd ~/catkin_ws
 catkin build
 source devel/setup.bash
 ```
-Podrían aparecer Warnings sobre `No relevant classes found. No output generated` en ese caso ignórelo. El proceso de compilación debe terminar sin errores. El nodo `find_dynamixel` busca en los Baudrate (9600, 57600, 115200, 1000000, 2000000, 3000000, 4000000) y muestra los servomotores dynamixels encontrados.
+Podrían aparecer Warnings sobre `No relevant classes found. No output generated` en ese caso ignórelo. El proceso de compilación debe terminar sin errores. El nodo `find_dynamixel` busca en los Baudrate (9600, 57600, 115200, 1000000, 2000000, 3000000, 4000000) y muestra los servomotores dynamixels encontrados. En dos Terminales diferentes ejecutar cada una de las siguientes lineas:
 ```
 roscore
 rosrun dynamixel_workbench_controllers find_dynamixel /dev/ttyUSB0
@@ -83,7 +83,7 @@ Si este es el caso, repita la instrucción para otorgar permisos de lecctura y e
 [ INFO] [1562033463.086206021]: id : 3, model name : AX-12A
 
 ```
-
+## Ejemplo de ejecución de un programa de usuario en ROS
 Se creó un programa-ejemplo basado en el código `read_write.cpp` encontrado en la carpeta de ejemplos para `linux` en `c++` de `DynamixelSDK`. A este código se le agregaron líneas para lanzar el nodo `read_write` y utilizar la librería `dynamixel_sdk` previamente creada. 
 
 Para instalarlo, ejecutar las siguientes instrucciones: 
@@ -94,8 +94,6 @@ cd ~/catkin_ws
 catkin build
 source devel/setup.bash
 ```
-
-## Ejemplo de ejecución
 En dos Terminales diferentes ejecutar cada una de las siguientes lineas:
 ```
 roscore
