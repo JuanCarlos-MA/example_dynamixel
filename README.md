@@ -40,7 +40,7 @@ git clone https://github.com/ROBOTIS-GIT/DynamixelSDK.git
 
 Esto descargará el repositorio `DynamixelSDK` en la carpeta personal de usuario. Dicho paquete descargado es en realidad un conjunto de librerías diseñadas para diversos lenguajes de programación como JAVA, MATLAB, LabVIEW, C#, etc. y además contiene los archivos necesarios para diversos sistemas operativos. Leer referencia [1] para mayores detalles. Realmente sólo las carpetas  `ros` y `c++` tienen utilidad. En la primera se encuentra el paquete a utilizar como librería y la segunda contiene códigos de ejemplo para mover los motores. La manera más rápida de proceder con la instalación es utilizar el gestor (explorador) de archivos de  Ubuntu y copiar sólo la carpeta `ros` dentro de la carpeta `~/catkin_ws/src/`. Cambiar el nombre de la carpeta `ros`  por  `DynamixelSDK`.
 
-Compilar el nuevo paquete `DynamixelSDK` para que pueda ser utilizado posteriormente por otros paquetes:
+Compilar el nuevo paquete `DynamixelSDK` para que pueda ser utilizado posteriormente por otros paquetes. Para ello, ejecute los siguientes comandos:
 ```
 cd ~/catkin_ws
 catkin build
