@@ -59,7 +59,7 @@ cd ~/catkin_ws
 catkin build
 source devel/setup.bash
 ```
-El proceso de compilación debe terminar sin errores. Podrían aparecer Warnings sobre `No relevant classes found. No output generated` en cuyo case ignórelo. El nodo `find_dynamixel` busca en los Baudrate (9600, 57600, 115200, 1000000, 2000000, 3000000, 4000000) y muestra los servomotores dynamixels encontrados.
+Podrían aparecer Warnings sobre `No relevant classes found. No output generated` en ese caso ignórelo. El proceso de compilación debe terminar sin errores. El nodo `find_dynamixel` busca en los Baudrate (9600, 57600, 115200, 1000000, 2000000, 3000000, 4000000) y muestra los servomotores dynamixels encontrados.
 ```
 roscore
 rosrun dynamixel_workbench_controllers find_dynamixel /dev/ttyUSB0
