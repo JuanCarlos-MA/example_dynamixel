@@ -16,11 +16,10 @@ uint8_t dxl_error = 0;                       // Dynamixel error
 uint16_t dxl_present_position;               // Present position
 
 
-
 // User-functions that utilize global variables
 
 void read(void) {            // Read present position
-	// Sending Instruction Packet
+    // Sending Instruction Packet
     dxl_comm_result = packetHandler->read2ByteTxRx(portHandler, DXL_ID, 36, &dxl_present_position, &dxl_error);
     
     // Analizing received Status Packet
@@ -31,7 +30,7 @@ void read(void) {            // Read present position
 }
 
 void write(void) {        // Write goal position
-	// Sending Instruction Packet
+    // Sending Instruction Packet
     dxl_comm_result = packetHandler->write2ByteTxRx(portHandler, DXL_ID, 30, dxl_goal_position[indexs], &dxl_error);
         
     // Analizing received Status Packet
@@ -42,7 +41,7 @@ void write(void) {        // Write goal position
 }
 
 void torque_on(void) {     // Enable Dynamixel Torque
-	// Sending Instruction Packet
+    // Sending Instruction Packet
     dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, DXL_ID, 24, 1, &dxl_error);
     
     // Analizing received Status Packet
@@ -55,7 +54,7 @@ void torque_on(void) {     // Enable Dynamixel Torque
 }
 
 void torque_off(void) {    // Disable Dynamixel Torque
-	// Sending Instruction Packet
+    // Sending Instruction Packet
     dxl_comm_result = packetHandler->write1ByteTxRx(portHandler, DXL_ID, 24, 0, &dxl_error);
     
     // Analizing received Status Packet
