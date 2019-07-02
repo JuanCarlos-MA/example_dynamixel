@@ -12,19 +12,19 @@ uint16_t dxl_model_number;                   // Dynamixel model number
 
 // User-function that utilize global variables
 void ping(void) {
-	for (int dxl_id = 1; dxl_id <= 3; ++dxl_id) {
+    for (int dxl_id = 1; dxl_id <= 3; ++dxl_id) {
 	
-		// Sending Instruction Packet
-		dxl_comm_result = packetHandler -> ping(portHandler, dxl_id, &dxl_model_number, &dxl_error);
+    // Sending Instruction Packet
+    dxl_comm_result = packetHandler -> ping(portHandler, dxl_id, &dxl_model_number, &dxl_error);
 		
-		// Analizing received Status Packet
-		if (dxl_comm_result != COMM_SUCCESS) // If comm is not succesful
-		    printf("%s\n", packetHandler -> getTxRxResult(dxl_comm_result));
-        else if (dxl_error != 0)             // If dynamixel got an error
-            printf("%s\n", packetHandler -> getRxPacketError(dxl_error));
-        else                                 // If everything is ok
-            printf("Dynamixel %i has been successfully connected \n", dxl_id);
-	}
+    // Analizing received Status Packet
+    if (dxl_comm_result != COMM_SUCCESS) // If comm is not succesful
+        printf("%s\n", packetHandler -> getTxRxResult(dxl_comm_result));
+    else if (dxl_error != 0)             // If dynamixel got an error
+        printf("%s\n", packetHandler -> getRxPacketError(dxl_error));
+    else                                 // If everything is ok
+        printf("Dynamixel %i has been successfully connected \n", dxl_id);
+    }
 }
 
 
