@@ -49,7 +49,7 @@ source devel/setup.bash
 
 El proceso de compilación debe terminar sin errores. 
 
-Para conocer que servomotores están conectados, se puede usar el nodo `find_dynamixel` del paquete `dynamixel_workbench_controllers`. Siga el siguiente procedimiento para instalarlo y usarlo.
+Para conocer que servomotores están conectados, se puede usar el nodo `find_dynamixel` del paquete `dynamixel_workbench_controllers`. Siga el siguiente procedimiento para instalarlo y usarlo. Para más detalles leer referencia [6].
 
 ```
 cd ~/catkin_ws/src
@@ -96,3 +96,4 @@ Ese paquete fue originalmente desarrollado por Robotis y se encuentra disponible
 3. Anónimo, "Mx-106 ", [Online]. Available: http://emanual.robotis.com/docs/en/dxl/mx/mx-106/, [Accessed: 05-Jun-2019].
 4. Anónimo, "Robotis Dynamixel RX-28 User Manual", [Online]. Available: http://www.hizook.com/files/users/3/RX-28_Robotis_Dynamixel_Servo_UserGuide.pdf, and https://www.manualslib.com/manual/141478/Robotis-Dynamixel-Rx-28.html, [Accessed: 05-Jun-2019].
 5. Anónimo, "Robotis Dynamixel RX-64 User Manual", [Online]. Available: https://www.robotshop.com/media/files/pdf/robotis-bioloid-dynamixel-rx-64-manual.pdf, [Accessed: 05-Jun-2019].
+6. Anónimo, "Dynamixel Workbench", [Online]. Available: http://emanual.robotis.com/docs/en/software/dynamixel/dynamixel_workbench/, [Accessed: 05-Jun-2019].
