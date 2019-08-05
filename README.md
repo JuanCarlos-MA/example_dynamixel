@@ -106,7 +106,7 @@ En dos Terminales diferentes ejecutar cada una de las siguientes lineas:
 roscore
 rosrun example_dynamixel <node_name>
 ```
-Estos programas se pueden usar como base para programas más complejos, pero eso requiere de mayor conocimiento del uso de los servomotores. Se sugiere leer las referencias [2-5] para mayores detalles.
+Esta información se pueden usar como base para programas más complejos, pero eso requiere de mayor conocimiento del uso de los servomotores. Se sugiere leer las referencias [2-5] para mayores detalles.
 
 ## Autores y colaboradores
 Ese paquete fue desarrollado en base a los programas originalmente publicados por Robotis en [1] y [7], pero fue ajustado ligeramente por Marco, Sarai, Bryan y el Dr. Alejandro Aceves-López para que sea más comprensible a los programadores nuevos de ROS.
